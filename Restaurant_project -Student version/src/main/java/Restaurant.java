@@ -36,7 +36,10 @@ public class Restaurant {
         return currentTime;
     }
 
-    public LocalTime getCurrentTime(){ return  LocalTime.now(); }
+    public LocalTime getCurrentTime()
+    {
+        return  LocalTime.now(); 
+    }
 
     public List<Item> getMenu() {
         if(menu.size() > 0)

@@ -17,7 +17,6 @@ class RestaurantServiceTest {
     public void BeforeEach(){
         LocalTime openingTime = getParse("22:30:00");
         LocalTime closingTime = getParse("23:00:00");
-        //service.addRestaurant("Amelie's cafe","Chennai",openingTime,closingTime);
        restaurant =  createRestaurant("Amelie's cafe","Chennai",openingTime,closingTime);
     }
 
@@ -28,7 +27,6 @@ class RestaurantServiceTest {
     private Restaurant createRestaurant(String name, String city, LocalTime openingTime, LocalTime closingTime) {
         Restaurant restaurantObj = service.addRestaurant(name,city,openingTime,closingTime);
         return restaurantObj;
-        //return new Restaurant(name,city,openingTime,closingTime);
     }
 
     //>>>>>>>>>>>>>>>>>>>>>>SEARCHING<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -67,9 +65,6 @@ class RestaurantServiceTest {
 
     @Test
     public void add_restaurant_should_increase_list_of_restaurants_size_by_1(){
-        restaurant.addToMenu("Sweet corn soup",119);
-        restaurant.addToMenu("Vegetable lasagne", 269);
-
         int initialNumberOfRestaurants = service.getRestaurants().size();
         service.addRestaurant("Pumpkin Tales","Chennai",LocalTime.parse("12:00:00"),LocalTime.parse("23:00:00"));
         assertEquals(initialNumberOfRestaurants + 1,service.getRestaurants().size());

@@ -43,7 +43,6 @@ class RestaurantTest {
     public void is_restaurant_open_should_return_false_if_time_is_outside_opening_and_closing_time(){
         Boolean isClose = restaurant.isRestaurantOpen();
         assertThat(isClose, equalTo(false));
-
     }
 
     //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
