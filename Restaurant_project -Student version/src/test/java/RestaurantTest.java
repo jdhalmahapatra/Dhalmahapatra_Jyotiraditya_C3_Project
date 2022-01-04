@@ -102,5 +102,14 @@ class RestaurantTest {
         Double price = restaurant.getOrderValue(selectedItems);
         assertEquals(600, price);
     }
+
+    @Test
+    public void total_price_is_0_if_item_name_provided_is_not_available_in_cafe_menu_list(){
+        addToMenu("Chilly Chicken", 400);
+        List<String> selectedItems = new ArrayList<>();
+        selectedItems.add("Bada Pav");
+        Double price = restaurant.getOrderValue(selectedItems);
+        assertEquals(0, price);
+    }
     //<<<<<<<<<<<<<<<<<<<<<<<ORDER VALUE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
