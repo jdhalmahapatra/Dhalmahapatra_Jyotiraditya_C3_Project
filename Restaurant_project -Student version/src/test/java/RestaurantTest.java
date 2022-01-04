@@ -93,14 +93,14 @@ class RestaurantTest {
 
     //<<<<<<<<<<<<<<<<<<<<<<<ORDER VALUE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     @Test
-    public void total_price_of_butter_chicken_and_Chilly_Chicken_is_600_rupees(){
+    public void total_price_of_butter_chicken_and_Chilly_Chicken_is_500_rupees(){
         addToMenu("Butter Chicken", 200);
-        addToMenu("Chilly Chicken", 400);
+        addToMenu("Chilly Chicken", 300);
         List<String> selectedItems = new ArrayList<>();
         selectedItems.add("Butter Chicken");
         selectedItems.add("Chilly Chicken");
         Double price = restaurant.getOrderValue(selectedItems);
-        assertEquals(600, price);
+        assertEquals(500, price);
     }
 
     @Test

@@ -85,6 +85,7 @@ public class Restaurant {
 
     public Double getOrderValue(List<String> selectedItems) {
         Double total = 0.0;
+        
         for(String itemName: selectedItems){
             Item item = findItemByName(itemName);
             if(null != item){
